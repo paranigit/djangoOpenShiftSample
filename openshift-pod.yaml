@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: django-sample-app
+  labels:
+    app: django-sample-app
+spec:
+  containers:
+  - env:
+    - name: DJANGO-APP-NAME
+      value: Sample App for Django Deployment in Openshift
+    image: docker.io/paranidocker/djangosampleapp:py38
+    imagePullPolicy: Always
+    name: django-sample-app-cont01
+    resources: {}
